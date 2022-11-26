@@ -1,14 +1,73 @@
-<p style="color: green"><%= notice %></p>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bootstrap 5 Website Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js%22%3E"></script>
+  </head>
 
-<h1>Projects</h1>
+  <body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+      <div class="container-fluid">
+      <a class="navbar-brand" href="http://localhost:3000/">Home</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Account</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Sign In</a></li>
+            <li><a class="dropdown-item" href="#">Sign Up</a></li>
+          </ul>
+        </li>
+        </ul>
+      </div>
+      </div>
+    </nav>
 
-<div id="projects">
-  <% @projects.each do |project| %>
-    <%= render project %>
-    <p>
-      <%= link_to "Show this project", project %>
-    </p>
-  <% end %>
-</div>
+    <div> 
+      <h1 class="display-3 text-center">Ben&apos;s Portfolio</h1> 
+      <p> My name is Ben Bittles. I am a UCCS student working towards my BS in Computer Science. Details about the program can be found here: <a href="https://eas.uccs.edu/cs/academics/undergraduate-programs/bachelor-of-science-in-computer-science" target="_blank">UCCS Bachelors of Science in Computer Science</a></p>
+      <p>I am looking to graduate in the spring of 2023.  I am hoping to start a career in back-end software development by summer 2023.</p>
+      <div style="color:red">
+        <p>Here would be sections of my resume INCLUDING:
+          <UL>
+            <LI>Work Experience</LI>
+            <LI>Relational Skills</LI>
+            <LI>Technical Skills</LI>
+          </UL>
+        </p> 
+      </div>
 
-<%= link_to "New project", new_project_path %>
+      <p>Below is a list of my projects that I have worked on as part of my curriculum at UCCS and personal projects.</p>
+    </div>
+
+    <div class="container mt-5">
+      <div class="row">
+
+        <div class="col-sm-4">
+          <h3>Project 1</h3>
+          <p>Lorem ipsum dolor sit amet, in adhuc dolore sit. Amet velit vix id, duo id omnes ponderum. Malis molestie eos te. Vidit suscipit sea ne, novum possim adversarium ut sit, ea qui tollit dicant. Mea et hinc porro facete. Ex alia velit contentiones usu, at odio luptatum instructior usu, mei urbanitas constituto ei.</p>
+          <button type="button" class="btn btn-primary">Show this project >></button>
+        </div>
+
+        <div class="col-sm-4">
+          <h3>Project 2</h3>
+          <p>Lorem ipsum dolor sit amet, in adhuc dolore sit. Amet velit vix id, duo id omnes ponderum. Malis molestie eos te. Vidit suscipit sea ne, novum possim adversarium ut sit, ea qui tollit dicant. Mea et hinc porro facete. Ex alia velit contentiones usu, at odio luptatum instructior usu, mei urbanitas constituto ei.</p>
+          <button type="button" class="btn btn-primary">Show this project >></button>
+        </div>
+
+        <div class="col-sm-4">
+          <h3>Project 3</h3>
+          <p>Lorem ipsum dolor sit amet, in adhuc dolore sit. Amet velit vix id, duo id omnes ponderum. Malis molestie eos te. Vidit suscipit sea ne, novum possim adversarium ut sit, ea qui tollit dicant. Mea et hinc porro facete. Ex alia velit contentiones usu, at odio luptatum instructior usu, mei urbanitas constituto ei.</p>
+          <button type="button" class="btn btn-primary">Show this project >></button>
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>
