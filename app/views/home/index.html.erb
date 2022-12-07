@@ -15,9 +15,6 @@
 
       <div style="padding-left: 2rem;">
         <h4 style="color: blue"> Ben Bittles </h3>
-        
-
-        <!--- Explain what the block of code below this line is doing --->
 
         <% if user_signed_in? %>
           
@@ -27,6 +24,7 @@
         <% else %>
           <a href="/users/sign_in"> Sign in</a>
         <% end %>
+        <button type="button" onclick="window.location.href='http://localhost:3000/projects';">Access Projects</button>
 
       </div>
     </div>
