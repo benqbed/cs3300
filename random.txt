@@ -1,0 +1,1 @@
+This is just to push newest commit with working main branch to github. This is an extremely scuffed way to do what im doing but its all i can think to do lol.
