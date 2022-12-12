@@ -5,28 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>CS3300 Portfolio Project</title>
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
   </head>
-  
+
   <body>
-    <div style="margin: 5% 0 0 10%;">
-    <h1>Projects</h1>   
-    <h1>CS 3300 Portfolio Project - Fall 2022</h1>
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+      <div class="container-fluid">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Account</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="/users/sign_in">Sign In</a></li>
+                <li><a class="dropdown-item" href="/users/sign_up">Sign Up</a></li>
+              </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/projects">Projects</a>
+          </li>
+        </ul>
+      </div>
+    </nav><br>
+
+    <div class="centered paddedForm container border border-dark rounded-3 text-black">
+      <h1 class="text-center">Ben Bittles CS 3300 Portfolio Project - Fall 2022</h1><br>
 
       <div style="padding-left: 2rem;">
-        <h4 style="color: blue"> Ben Bittles </h3>
 
         <% if user_signed_in? %>
           
           <div> Welcome <%= current_user.email %> </div>
           <%= button_to "Sign out", destroy_user_session_path, method: :delete %> 
+
+          <div class="container-fluid mt-3">
+            <a href="/projects" class="btn btn-default" style="border: 1px solid #808080;" >See Projects</a>
+          </div><br>
         
         <% else %>
-          <a href="/users/sign_in"> Sign in</a>
+          <div class="container border border-dark rounded-3 text-black text-center">
+            <p>You are not signed in. To continue, please sign in or sign up.</p>
+            <a href="/users/sign_in">Sign in</a>
+          </div><br>
         <% end %>
-        <button type="button" onclick="window.location.href='http://localhost:3000/projects';">Access Projects</button>
 
       </div>
     </div>
+
   </body>
+
+  <footer class="bg-light text-center text-lg-start fixed-bottom">
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.4);">
+      © 2022 Copyright: Ben Bittles
+    </div>
+  </footer>
 </html>
